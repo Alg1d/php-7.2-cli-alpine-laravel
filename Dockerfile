@@ -12,12 +12,14 @@ RUN set -xe \
         imagemagick-dev \
         libtool \
         make \
+        libpng-dev \
     && docker-php-ext-install zip \
     && docker-php-ext-install mysqli \
     && docker-php-ext-install tokenizer \
     && docker-php-ext-install opcache \
     && docker-php-ext-install pdo \
     && docker-php-ext-install pdo_mysql \
+    && docker-php-ext-install gd \
     && docker-php-ext-configure intl \
     && docker-php-ext-install intl \
     && docker-php-ext-enable intl \

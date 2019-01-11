@@ -33,6 +33,9 @@ RUN apk add --no-cache $PHPIZE_DEPS \
     && rm -rf /tmp/pear \
     && docker-php-ext-enable redis
 
+RUN apk add --no-cache libxslt-dev \
+    && docker-php-ext-install xsl
+
 RUN apk add --no-cache libpng-dev \
     && docker-php-ext-install gd
 

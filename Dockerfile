@@ -51,7 +51,7 @@ RUN apk add --no-cache libmcrypt-dev \
 RUN apk --update add curl \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-RUN apk add mysql-client bash
+RUN apk --update add mysql-client bash git
 
 USER root
 

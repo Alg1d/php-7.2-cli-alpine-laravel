@@ -53,8 +53,9 @@ RUN apk --update add curl \
 
 RUN apk --update add mysql-client bash git
 
-# Used for PDF generation with wkhtmltopdf
-RUN apk --update add libxrender libxext
+RUN apk --update add imagemagick imagemagick-dev \
+    && pecl install imagick \
+    && docker-php-ext-enable imagick
 
 USER root
 

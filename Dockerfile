@@ -53,6 +53,9 @@ RUN apk --update add curl \
 
 RUN apk --update add mysql-client bash git
 
+# Used for PDF generation with wkhtmltopdf
+RUN apk --update add libxrender libxext
+
 USER root
 
 # Tip from https://github.com/chrootLogin/docker-nextcloud/issues/3#issuecomment-271626117
